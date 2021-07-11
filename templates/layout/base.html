@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>
+    {% block title %} {% endblock %}
+  </title>
+
+  {% include 'layout/links.html' %}
+
+  {% block links %} {% endblock %}
+</head>
+
+<body class="hold-transition sidebar-mini layout-fixed">
+<div class="wrapper">
+  <!-- Preloader -->
+  <div class="preloader flex-column justify-content-center align-items-center">
+    <img class="animation__shake" src="/static/img/AdminLTELogo.png" alt="AdminLTELogo" height="60" width="60">
+  </div>
+
+  {% include 'layout/navbar.html' %}
+
+  {% include 'layout/sidebar.html' %}
+
+  {% block content %} {% endblock %}
+
+  {% include 'layout/footer.html' %}
+
+</div>
+<!-- ./wrapper -->
+
+{% include 'layout/scripts.html' %}
+
+{% block scripts %} {% endblock %}
+
+</body>
+</html>
